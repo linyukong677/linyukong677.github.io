@@ -8,7 +8,7 @@ url: "https://linyukong677.github.io" # the base hostname & protocol for your si
 # twitter_username: linyukong677
 github_username: linyukong677
 avatar: ./_layout/avatar.jpg
-cover_image: ./_layout/bg.jpeg
+cover_image: ./_layout/bg.jpg
 permalink: pretty
 
 # Build settings
