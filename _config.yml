@@ -27,6 +27,11 @@ exclude:
   - scripts/
   - not-pure-poole.gemspec
 
+social:
+  name: linyukong677
+  links:
+    - https://github.com/linyukong677
+
 author:
   name: Lin Yu Kong
   url: https://github.com/linyukong677/
