@@ -7,8 +7,8 @@ baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://linyukong677.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: linyukong677
 github_username: linyukong677
-avatar: ./_layout/avatar.jpg
-cover_image: ./_layout/bg.jpg
+avatar: /avatar.jpg
+cover_image: /bg.jpg
 permalink: pretty
 
 # Build settings
