@@ -3,11 +3,11 @@ layout: post
 title: Uncertainty Quantification
 date: 2022-11-05 19:13 +0800
 last_modified_at: 2022-11-06 11:08 +0800
-tags: [Baysian, Machine Learning]
+tags: [Bayesian, Machine Learning]
 toc:  true
 ---
 
-一个人可贵的不是能做什么，而是知道自己能做什么
+一个人可贵的不是能做什么，而是知道自己能做什么以及能做到什么程度
 {: .message }
 
 目前深度学习在很多领域的表现都非常好，像是CV和NLP领域都能达到很高的准确率。但是众所周知，Tesla无人驾驶之前发生了很多起事故。其中一起事故的最终原因是视觉算法误将一辆浅色卡车误判为天空。
@@ -24,11 +24,11 @@ toc:  true
 
 在我们深入研究 UQ 之前，我们需要先了解一些前置知识，包括：
 
-- **Baysian Machine Learning**
+- **Bayesian Machine Learning**
 - **Deep Learning**
 - **Aleatoric and Epistemic Uncertainty**
 
-其中，Deep Learning 相信读者已经有一定的了解，这里不再赘述。Baysian Machine Learning 我在（TODO:）一文中有过详细介绍。
+其中，Deep Learning 相信读者已经有一定的了解，这里不再赘述。Bayesian Machine Learning 我在（TODO:）一文中有过详细介绍。
 
 Aleatoric Uncertainty 和 Epistemic Uncertainty 是 UQ 中的两个重要概念，这里我们先简单介绍一下。
 
@@ -39,32 +39,45 @@ Aleatoric Uncertainty 和 Epistemic Uncertainty 是 UQ 中的两个重要概念�
 
 我个人 Uncertainty Quantification 的方法大致分为两大类：
 
-- **Uncertainty Quantification using Baysian Techniques**
+- **Uncertainty Quantification using Bayesian Techniques**
 - **Uncertainty Quantification in Reinforcement Learning**
 - **Uncertainty Quantification using Ensemble Techniques**
 
-### Uncertainty Quantification using Baysian Techniques
+### Uncertainty Quantification using Bayesian Techniques
 
-我在（TODO:）一文中详细介绍过 Baysian Machine Learning，整体来说，Baysian 的思想是，我们不再去学习一个确定的模型，而是学习一个模型的分布。这样，我们就可以通过对模型的分布进行采样，来获得不同的模型，从而获得不同的预测结果。那么，模型的分布的多样性（Variance），就可以用来衡量 Uncertainty。
+我在（TODO:）一文中详细介绍过 Bayesian Machine Learning，整体来说，Bayesian 的思想是，我们不再去学习一个确定的模型，而是学习一个模型的分布。这样，我们就可以通过对模型的分布进行采样，来获得不同的模型，从而获得不同的预测结果。那么，模型的分布的多样性（Variance），就可以用来衡量 Uncertainty。
 
-我们主要介绍这几种 Baysian 方法：
+我们主要介绍这几种 Bayesian 方法：
 
 - Monte Carlo Dropout (MC Dropout)
 - Markov Chain Monte Carlo (MCMC)
 - Variational Inference (VI)
-- Baysian Active Learning (BAL)
-- Baysian By Backprop (BBP)
+- Bayesian Active Learning (BAL)
+- Bayesian By Backprop (BBB)
 - Variational Autoencoder (VAE)
 - Laplacian Approximation (LA)
 
-#### Monte Carlo Dropout (MC Dropout)
+其中，MCMC，VI，BBB，LA 都是 Bayesian 方法的一种实现（即求解后验分布的一种方式），MC Dropout，BAL，VAE 可以看作是 Bayesian 方法的应用。
 
-对于MC Dropout，我有一篇专门的介绍和代码实例，建议阅读：（TODO:）
+这几种方法我都写过专门的文章进行讲解分析，有需要的话可以阅读，加深理解。（TODO:）
 
-其实看完上面的文章，MC Dropout 的原理就很清楚了。总的来说，MC Dropout 是利用了模型训练中的 Dropout，将训练出来的确定性模型转换成了一个模型的分布，从而将Deep Learning与Baysian结合起来。而这个模型的分布，就可以用来衡量 Uncertainty。
+### Uncertainty Quantification in Reinforcement Learning
 
+（TODO:）
 
 ### Uncertainty Quantification using Ensemble Techniques
+
+关于Ensemble（集成学习），我有过一篇专门的介绍。事实上，几乎所有的 Ensemble 方法都可以用来进行 Uncertainty Quantification。比较典型的有：
+
+- Deep Ensemble
+- Bayesian Deep Ensemble
+
+> By the way，其实前面提到的 MC Dropout 也可以看作是 Ensemble 方法的一种。
+
+## Related Articles
+
+https://zhuanlan.zhihu.com/p/133525286
+
 
 ## Refererence
 
